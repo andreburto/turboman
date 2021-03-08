@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turboman Through The Years</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="startUp()" onresize="resizeAll()">
+<div id="content">
+    <canvas id="theCanvas"></canvas>
+</div>
+<div id="menu">
+    <svg height="100" width="100" id="backButton" onclick="backButton()">
+        <polygon points="0,50 50,0 50,25 100,25 100,75 50,75 50,100" style="fill:lime;stroke:black;stroke-width:1" />
+    </svg>
+    <div id="showTheYear"></div>
+    <svg height="100" width="100" id="nextButton" onclick="nextButton()">
+        <polygon points="100,50 50,0 50,25 0,25 0,75 50,75 50,100" style="fill:lime;stroke:black;stroke-width:1" />
+    </svg>
+</div>
+</body>
+</html>

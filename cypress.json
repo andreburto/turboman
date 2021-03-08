@@ -1,0 +1,9 @@
+{
+    "baseUrl": "http://localhost:8080",
+    "defaultCommandTimeout": 15000,
+    "env": {
+      "WAIT_UNTIL_TIMEOUT": 10000,
+      "WAIT_UNTIL_INTERVAL": 200
+    },
+    "includeShadowDom": true
+  }

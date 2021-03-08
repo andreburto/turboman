@@ -1,0 +1,43 @@
+body {
+    background-color: #000000;
+    border: 0px none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    background-color: transparent;
+    margin: 0px none;
+    padding: 0px;
+    position: absolute;
+}
+
+div#content {
+    z-index: 10;
+}
+
+div#menu {
+    height: 100px;
+    z-index: 20;
+}
+
+div#showTheYear {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+svg#backButton {
+    height: 100px;
+    position: absolute;
+    width: 100px;
+
+}
+
+svg#nextButton {
+    height: 100px;
+    position: absolute;
+    width: 100px;
+}
