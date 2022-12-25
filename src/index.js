@@ -1,7 +1,3 @@
-const startYear = 2013
-const endYear = 2021
-const imageExt = "jpg"
-
 const loadImage = () => {
     let c = document.getElementById("theCanvas");
     let ctx = c.getContext("2d");

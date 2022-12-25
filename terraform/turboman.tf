@@ -19,6 +19,7 @@ locals {
     "css"  = "text/css"
     "html" = "text/html"
     "js"   = "application/javascript"
+    "json" = "application/json"
     "txt"  = "text/plain"
   }
 }

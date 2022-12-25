@@ -2,12 +2,14 @@
   "name": "cypress-test",
   "version": "1.0.0",
   "devDependencies": {
-    "aws-sdk":"2.820.0",
+    "aws-sdk": "2.820.0",
     "cypress": "6.2.0",
     "http-server": "0.12.3"
   },
   "scripts": {
     "cy:open": "./node_modules/.bin/cypress open",
-    "server": "./node_modules/.bin/http-server ./src"
+    "server": "./node_modules/.bin/http-server ./src",
+    "build-list": "node ./bin/build-list.js",
+    "deploy": "npm rum build-list; cd ./terraform; terraform init; terraform apply -auto-approve"
   }
 }
