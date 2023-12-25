@@ -106,26 +106,40 @@ const displayYear = () => {
 
 const backButton = () => {
     let cYear = getYear() - 1
+    console.log("Back, cYear: " + cYear)
     if (cYear < yearRange[0]) {
         cYear = yearRange[yearRange.length - 1]
     }
     setYear(cYear)
     loadImage()
-    // displayYear()
 }
 
 const nextButton = () => {
     let cYear = getYear() + 1
+    console.log("Next, cYear: " + cYear)
     if (cYear > yearRange[yearRange.length - 1]) {
         cYear = yearRange[0]
     }
     setYear(cYear)
     loadImage()
-    // displayYear()
+}
+
+function getYearFromUrl() {
+    var url = window.location.href;
+    var parts = url.split('#', 2);
+    if (parts.length < 2) {
+        return undefined;
+    }
+    return parts[1];
 }
 
 const startUp = () => {
     setYearRange(startYear, endYear)
-    setYear(yearRange[0])
+    yearToStart = getYearFromUrl()
+    if (yearToStart == undefined) {
+        yearToStart = startYear
+    }
+    console.log("yearToStart: " + yearToStart)
+    setYear(parseInt(yearToStart))
     resizeAll()
 }
