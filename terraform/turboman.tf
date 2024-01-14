@@ -5,6 +5,14 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "s3" {
+    encrypt = true
+    bucket = "mothersect-tf-state"
+    dynamodb_table = "mothersect-tf-state-lock"
+    key    = "turboman"
+    region = "us-east-1"
+  }
 }
 
 # Configure the AWS Provider
